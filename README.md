@@ -1,5 +1,15 @@
 # API SAVER 2.0
 
+This little API was made for one purpose only, using the Angular Interceptors to intercept all requests and responses to mirror them to this API Saver and, just like the name seels it, will save everything, and if the original API is down, you can use the same interceptors to get back every data stored inside the API Saver.
+
+My job was so frustrating because the APIs went down multiple of times each day, and it was very frustrating, especially when the original Front End App need those api calls to work properly, so here is my solution...
+
+It's far from perfect, it was made quickly, but if you want to improve it, go for it !
+
+I'm working on a Web Admin template with EJS (i'll do an other Front template in the future, for now i'll stick to the basics).
+
+The API Itself can work as a standalone API to save avery request that is send to it, but I developped only 2 interceptors, for Angular 2 and 5+ at the moment.
+
 Welcome to the documentation of the API Saver.
 In this documentation you will find :
 
