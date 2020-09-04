@@ -1,0 +1,33 @@
+version: '3'
+services:
+  mongo_saver:
+    image: "mongo:latest"
+    ports:
+      - "29017:27017"
+    expose:
+      - "29017"
+    networks:
+      stack_saver:
+        ipv4_address: 10.0.0.2
+    container_name: NEC_MONGO
+  api_saver:
+    build:
+      context: .
+    ports:
+      - "3001:3001"
+    expose:
+      - "3001"
+    networks:
+      stack_saver:
+        ipv4_address: 10.0.0.3
+    container_name: SAVER_API
+    depends_on:
+    - "mongo_saver"
+networks:
+  stack_saver:
+    driver: bridge
+    ipam:
+      config:
+      - subnet: 10.0.0.0/16
+  docker-stack-services_services:
+    external: true

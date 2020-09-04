@@ -1,0 +1,20 @@
+{
+  "config": {
+    "secret": "AD6YTPSNT8arL7kpEndU",
+    "api": {
+      "ip": "127.0.0.1",
+      "port": 3001
+    },
+    "mongo": {
+      "ip": "127.0.0.1",
+      "port": 27017,
+      "base_name": "api-saver",
+      "enable": false
+    },
+    "lowdb": {
+      "filename": "bdd.json",
+      "enable": true
+    },
+    "limit": "5mb"
+  }
+}
